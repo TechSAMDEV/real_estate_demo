@@ -28,3 +28,15 @@ async function loadComponents() {
 
 // 3. Run the function when the page finishes loading
 document.addEventListener('DOMContentLoaded', loadComponents);
+
+
+// Add this to your js/components.js
+document.addEventListener('click', (event) => {
+    // Check if the clicked element is our menu button
+    if (event.target.closest('#menu_btn')) {
+        const mobileMenu = document.getElementById('mobile_menu');
+        if (mobileMenu) {
+            mobileMenu.classList.toggle('hidden');
+        }
+    }
+});

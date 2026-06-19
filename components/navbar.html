@@ -8,13 +8,20 @@
 </head>
 
 <body>
-
     <nav class="bg-white shadow-md fixed top-0 w-full z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="text-2xl font-bold text-blue-600 tracking-tight">EstateSwift</a>
 
-            <!-- Links -->
+            <!-- Hamburger Button (Visible on Mobile) -->
+            <button id="menu_btn" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Desktop Links -->
             <div class="hidden md:flex space-x-8 font-medium text-gray-700">
                 <a href="index.html" class="hover:text-blue-600 transition">Home</a>
                 <a href="properties.html" class="hover:text-blue-600 transition">Properties</a>
@@ -24,9 +31,19 @@
 
             <!-- CTA -->
             <a href="contact.html"
-                class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-lg">
+                class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-lg">
                 Inquire Now
             </a>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile_menu"
+            class="hidden md:hidden bg-white border-t px-6 py-4 flex flex-col space-y-4 font-medium text-gray-700">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <a href="properties.html" class="hover:text-blue-600">Properties</a>
+            <a href="about.html" class="hover:text-blue-600">About</a>
+            <a href="contact.html" class="hover:text-blue-600">Contact</a>
+            <a href="contact.html" class="bg-blue-600 text-white px-5 py-2 rounded-lg text-center">Inquire Now</a>
         </div>
     </nav>
 
