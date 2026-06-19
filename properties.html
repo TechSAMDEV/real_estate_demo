@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Properties | EstateSwift</title>
+</head>
+
+<body class="bg-gray-50 pt-20">
+
+    <!-- Navbar -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <header class="max-w-7xl mx-auto px-6 py-12 text-center">
+        <h1 class="text-4xl font-bold mb-4">Explore Our Listings</h1>
+        <p class="text-gray-600">Find the perfect property that fits your lifestyle.</p>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="max-w-7xl mx-auto px-6 pb-8">
+        <div class="bg-white p-6 rounded-xl shadow-md flex flex-wrap gap-4 items-end">
+            <div class="flex-1 min-w-[200px]">
+                <label class="block text-sm font-medium mb-1">Search Property</label>
+                <input type="text" id="search-input" placeholder="e.g. Villa, Ikoyi..."
+                    class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+            </div>
+            <div class="flex-1 min-w-[200px]">
+                <label class="block text-sm font-medium mb-1">Location</label>
+                <select id="location-filter"
+                    class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    <option value="All">All Locations</option>
+                    <option value="Victoria Island">Victoria Island</option>
+                    <option value="Ikoyi">Ikoyi</option>
+                    <option value="Lekki Phase 1">Lekki Phase 1</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Grid -->
+    <div id="property-grid" class="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- JS will inject filtered cards here -->
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
